@@ -1,8 +1,15 @@
 import React from "react";
-import styles from "../styles/Home.module.scss";
+import Script from "next/script";
+import Main from "../pages/main";
 
 function Home() {
-  return <div className={styles.header}>This is home</div>;
+  return (
+    <div>
+      <Script src="/js/scroll.js"></Script>
+
+      <Main></Main>
+    </div>
+  );
 }
 
 export default Home;

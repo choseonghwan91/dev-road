@@ -1,5 +1,9 @@
 @import "./color.module";
 
-.header {
-  color: $color-link;
+.lineContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  margin: 0 auto;
 }
