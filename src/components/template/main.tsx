@@ -4,7 +4,6 @@ import styles from "../../../src/styles/home.module.scss";
 export default function Main() {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.nav}>dd</div>
       <div className={styles.roadMap}>
         <div className={styles.intro}>
           <h1>header</h1>
@@ -24,7 +23,6 @@ export default function Main() {
           </svg>
         </div>
       </div>
-      <div className={styles.footer}></div>
     </div>
   );
 }
