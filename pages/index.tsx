@@ -1,6 +1,6 @@
 import React from "react";
 import Script from "next/script";
-import Main from "../pages/main";
+import Main from "../src/components/template/main";
 
 function Home() {
   return (
