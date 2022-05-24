@@ -1,19 +1,37 @@
 @import "./color.module";
 
 .roadMap {
+  width: 100%;
+  height: 100%;
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 35rem;
+    border: 1px solid white;
+    margin: 0 auto;
+    h1 {
+      font-size: $font-large;
+    }
+    h3 {
+      font-size: $font-small;
+    }
+  }
+
   .lineContainer {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 35rem;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    height: 100%;
+    height: 100vh;
     text-align: center;
-    overflow: hidden;
 
     svg {
       display: inline-block;
-      height: 100%;
+      height: 100vh;
     }
   }
 
