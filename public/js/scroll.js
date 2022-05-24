@@ -16,12 +16,4 @@ window.addEventListener("scroll", () => {
 
   // Draw in reverse
   path.style.strokeDashoffset = pathLength - drawLength;
-
-  // console.log(path);
-  console.log(pathLength);
-  console.log(scrollPercentage);
-  console.log(drawLength);
-  console.log("------------");
 });
-
-console.log("bew");
