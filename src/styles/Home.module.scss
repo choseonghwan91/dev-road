@@ -1,9 +1,47 @@
 @import "./color.module";
 
-.lineContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 80%;
-  margin: 0 auto;
+.wrapper {
+  .roadMap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      height: 35rem;
+      border: 1px solid white;
+      margin: 3.5rem auto 3.5rem;
+      h1 {
+        font-size: $font-large;
+      }
+      h3 {
+        font-size: $font-small;
+      }
+    }
+
+    .lineContainer {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 100%;
+      text-align: center;
+      svg {
+        display: inline-block;
+        height: 100vh;
+        margin-bottom: 10rem;
+      }
+    }
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+  }
 }

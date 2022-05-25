@@ -6,16 +6,14 @@ path.style.strokeDashoffset = pathLength;
 
 window.addEventListener("scroll", () => {
   // What % down is it?
-  let scrollPercentage =
+  var scrollPercentage =
     (document.documentElement.scrollTop + document.body.scrollTop) /
     (document.documentElement.scrollHeight -
       document.documentElement.clientHeight);
 
   // Length to offset the dashes
-  let drawLength = pathLength * scrollPercentage;
+  var drawLength = pathLength * scrollPercentage;
 
   // Draw in reverse
   path.style.strokeDashoffset = pathLength - drawLength;
 });
-
-console.log("bew");
