@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../src/styles/home.module.scss";
 
 export default function Main() {
+  const [category, setCategory] = useState<string[]>([]);
+  useEffect(() => {
+    fetch("/assets/mock/mock.json")
+      .then((res) => res.json())
+      .then((res) => {
+        const dataList = res.data;
+        const arr = [];
+        for (let i = 0; i < dataList.length; i++) {
+          arr.push(dataList[i]["group"]);
+          console.log(arr);
+        }
+        setCategory(arr);
+      });
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.roadMap}>
         <div className={styles.intro}>
           <h1>header</h1>
           <h3>blabla..</h3>
+          {category.map((el) => (
+            <div key={el}>{el}</div>
+          ))}
         </div>
         <div className={styles.lineContainer}>
           <svg
